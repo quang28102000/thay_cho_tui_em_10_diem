@@ -57,12 +57,12 @@ void write_list(const char* filename, SV* arr, int n)
 	fclose(fo);
 }
 
-float avg(const SV* sv)
+float avg(SV* sv)
 {
 	return (sv->diem_prf + sv->diem_mae + sv->diem_cae + sv->diem_ssg + sv->diem_csi) / 5.f;
 }
 
-int cmp_arg(const SV* sv1, const  SV* sv2)
+int cmp_arg(SV* sv1,   SV* sv2)
 {
 	float avg1 = avg(sv1);
 	float avg2 = avg(sv2);
