@@ -1,6 +1,6 @@
 #ifndef TRUNG_H
 #define TRUNG_H
-#include "sv.g"
+#include "sv.h"
 
 int read_list(const char* filename, SV* arr, int* n); 
 void write_list(const char* filename, SV* arr, int n); 

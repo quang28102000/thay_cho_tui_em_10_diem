@@ -1,5 +1,6 @@
 #ifndef NHAN_H
 #define NHAN_H
+#include "sv.h"
 //phần này dành cho anh Nhân
 void sort(SV* arr, int size, int (*cmp)(SV*, SV*));
 
