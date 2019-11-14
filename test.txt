@@ -1,0 +1,4 @@
+3
+ten:ngo thoi trung;mssv:de140028;lop:se1408;prf:9.500000;mae:7.500000;cae:8.900000;ssg:7.700000;csi:6.600000;
+ten:nguyen cong quang;mssv:----;lop:se1408;prf:9.500000;mae:7.500000;cae:8.900000;ssg:7.700000;csi:6.600000;
+ten:le khac thanh nhan;mssv:----;lop:se1408;prf:9.500000;mae:7.500000;cae:8.900000;ssg:7.700000;csi:6.600000;

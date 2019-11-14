@@ -1,5 +1,6 @@
 #include "trung.h"
 #include <stdio.h>
+#include <stdlib.h>
 void write_sv(FILE* file, SV* sv)
 {
 	fprintf(file, "ten:%s;mssv:%s;lop:%s;prf:%f;mae:%f;cae:%f;ssg:%f;csi:%f;\n",
@@ -28,7 +29,7 @@ void read_sv(FILE* file, SV* sv)
 			);
 }
 
-int read_list(const char* filename, SV* arr, int* n)
+int read_list(const char* filename, SV** arr, int* n)
 {
 	FILE* fi = fopen(filename, "r");
 	if(fi == NULL)
@@ -39,20 +40,23 @@ int read_list(const char* filename, SV* arr, int* n)
 	fscanf(fi, "%d\n", n);
 	for(int i = 0; i < *n; i++)
 	{
-		read_sv(fi, &arr[i]);
+		SV* sv = (SV*) malloc(sizeof SV);
+		read_sv(fi, sv);
+		arr[i] = sv;
 	}
 	
 	fclose(fi);	
 	return 1;
 }
 
-void write_list(const char* filename, SV* arr, int n)
+void write_list(const char* filename, SV** arr, int n)
 {
 	FILE* fo = fopen(filename, "w");
 	fprintf(fo, "%d\n", n);
 	for(int i = 0; i < n; i++)
 	{
-		write_sv(fo, &arr[i]);
+		write_sv(fo, arr[i]);
+		free(arr[i]);
 	}
 	fclose(fo);
 }
