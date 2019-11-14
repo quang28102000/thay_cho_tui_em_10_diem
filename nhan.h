@@ -1,11 +1,23 @@
 #ifndef NHAN_H
 #define NHAN_H
 #include "sv.h"
-//phần này dành cho anh Nhân
+
+/**
+ * Sắp xếp danh sách học sinh
+ * @param arr danh sách học sinh
+ * @param size độ lớn của danh sách
+ * @cmp hàm so sánh hai sinh viên
+ */
 void sort(SV** arr, int size, int (*cmp)(SV*, SV*));
 
-//trả về -1 cho bé hơn, 0 cho bằng nhau và 1 cho lớn hơn
+/**
+ * Hàm so sánh hai sinh viên theo điểm prf
+ * @param sv1 sinh viên thứ nhất
+ * @param sv2 sinh viên thứ hai
+ * return -1 nếu điểm prf của sv1 bé hơn của sv2, 0 nếu bằng nhau và 1 nếu lớn hơn
+ */
 int cmp_prf(SV* sv1, SV* sv2);
+
 int cmp_mae(SV* sv1, SV* sv2);
 int cmp_cae(SV* sv1, SV* sv2);
 int cmp_ssg(SV* sv1, SV* sv2);

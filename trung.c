@@ -40,7 +40,7 @@ int read_list(const char* filename, SV** arr, int* n)
 	fscanf(fi, "%d\n", n);
 	for(int i = 0; i < *n; i++)
 	{
-		SV* sv = (SV*) malloc(sizeof SV);
+		SV* sv = (SV*) malloc(sizeof(SV));
 		read_sv(fi, sv);
 		arr[i] = sv;
 	}
