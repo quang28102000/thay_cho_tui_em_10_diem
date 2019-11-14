@@ -19,6 +19,8 @@ int read_list(const char* filename, SV** arr, int* n);
  * @return true nếu đọc thành công
  */
 void write_list(const char* filename, SV** arr, int n);
+
+
 /**
  * Tính điểm trung bình của một sinh viên
  * @param sv sinh viên cần tính điểm trung bình
@@ -26,8 +28,8 @@ void write_list(const char* filename, SV** arr, int n);
  */
 float avg(SV* sv); 
 
-/**
- * So sánh điểm trung bình của hai sinh viên
- */
 int cmp_avg(SV* sv1, SV* sv2);
+
+int cmp_ten(SV* sv1, SV* sv2);
+
 #endif

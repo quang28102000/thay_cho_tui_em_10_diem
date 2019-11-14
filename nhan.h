@@ -18,9 +18,24 @@ void sort(SV** arr, int size, int (*cmp)(SV*, SV*));
  */
 int cmp_prf(SV* sv1, SV* sv2);
 
+/**
+ * @see @cmp_prf
+ */
 int cmp_mae(SV* sv1, SV* sv2);
+
+/**
+ * @see @cmp_prf
+ */
 int cmp_cae(SV* sv1, SV* sv2);
+
+/**
+ * @see @cmp_prf
+ */
 int cmp_ssg(SV* sv1, SV* sv2);
+
+/**
+ * @see @cmp_prf
+ */
 int cmp_csi(SV* sv1, SV* sv2);
 
 #endif

@@ -49,6 +49,4 @@ int find_by_mssv(SV** arr, int size, const char* mssv);
 int find_by_lop(SV** arr, int size, const char* lop);
 
 
-int cmp_ten(SV* sv1, SV* sv2);
-
 #endif

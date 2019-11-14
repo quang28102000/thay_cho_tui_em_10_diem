@@ -1,6 +1,7 @@
 #include "trung.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 void write_sv(FILE* file, SV* sv)
 {
 	fprintf(file, "ten:%s;mssv:%s;lop:%s;prf:%f;mae:%f;cae:%f;ssg:%f;csi:%f;\n",
@@ -76,4 +77,9 @@ int cmp_arg(SV* sv1,   SV* sv2)
 		return 1;
 	else 
 		return 0;	
+}
+
+int cmp_ten(SV* sv1, SV* sv2)
+{	
+	return strcmp(sv1->ten, sv2->ten);
 }
