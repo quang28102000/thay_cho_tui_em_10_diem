@@ -1,0 +1,37 @@
+# Project: trung_va_nhung_nguoi_ban
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Untitled2.o nhan.o quang.o trung.o trung_va_nhung_nguoi_ban.o
+LINKOBJ  = Untitled2.o nhan.o quang.o trung.o trung_va_nhung_nguoi_ban.o
+LIBS     = -L"D:/Dev-Cpp/MinGW64/lib" -L"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Dev-Cpp/MinGW64/include" -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Dev-Cpp/MinGW64/include" -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = trung_va_nhung_nguoi_ban.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+nhan.o: nhan.c
+	$(CC) -c nhan.c -o nhan.o $(CFLAGS)
+
+quang.o: quang.c
+	$(CC) -c quang.c -o quang.o $(CFLAGS)
+
+trung.o: trung.c
+	$(CC) -c trung.c -o trung.o $(CFLAGS)
+
+trung_va_nhung_nguoi_ban.o: trung_va_nhung_nguoi_ban.c
+	$(CC) -c trung_va_nhung_nguoi_ban.c -o trung_va_nhung_nguoi_ban.o $(CFLAGS)

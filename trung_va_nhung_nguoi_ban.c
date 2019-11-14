@@ -95,6 +95,8 @@ void case1()
 	SV** temp = (SV**) calloc(g_size, sizeof(SV*));
 	
 	free(temp);
+	
+	thaydoi
 }
 
 void case2()
