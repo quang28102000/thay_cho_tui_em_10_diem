@@ -96,7 +96,6 @@ void case1()
 	
 	free(temp);
 	
-	thaydoi
 }
 
 void case2()
